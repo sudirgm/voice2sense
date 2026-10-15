@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+.venv/
+env/
+venv/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+
+# Production Build Outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Python Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Heavy Machine Learning Weights & Datasets
+multilingual translation/models/
+Train/
+Motion-Features/
+dataset_cache/
+*.keras
+*.h5
+*.ckpt
+
+# IDE & OS Artifacts
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & Temporary Files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+scratch/

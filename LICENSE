@@ -1,0 +1,58 @@
+MIT License
+
+Copyright (c) 2026 Voice2Sense Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+===============================================================================
+THIRD-PARTY LICENSES & ATTRIBUTIONS
+===============================================================================
+
+1. 3D Avatar Rig & Character Mesh (`viewer/public/character_clean.glb`)
+   - Origin: Quaternius (Universal Animation Library / Modular Character Rig)
+   - License: Creative Commons Zero v1.0 Universal (CC0 1.0) Public Domain Dedication
+   - Author: @Quaternius (https://quaternius.com)
+   - Terms: https://creativecommons.org/publicdomain/zero/1.0/
+
+2. MediaPipe Vision Tasks & WebAssembly (`viewer/public/wasm/*`, `viewer/public/models/*`)
+   - Origin: Google MediaPipe (@mediapipe/tasks-vision)
+   - License: Apache License, Version 2.0
+   - Copyright (c) Google Inc.
+   - Terms: http://www.apache.org/licenses/LICENSE-2.0
+
+3. Indic NLP Library (`multilingual translation/indicnlp/*`)
+   - Origin: Indic NLP Library
+   - License: MIT License
+   - Copyright (c) 2013-present Anoop Kunchukuttan
+   - Terms: See `multilingual translation/LICENSE.indicnlp`
+
+4. Three.js (`three`)
+   - Origin: Three.js library
+   - License: MIT License
+   - Copyright (c) 2010-2026 Three.js Authors
+
+5. Indian Sign Language (ISL) Synthetic Vocabulary (`viewer/public/dictionary.json`)
+   - Origin: 100% project-authored synthetic vocabulary (40 conversational & educational sign definitions).
+   - Contains zero inherited restricted dataset records; created specifically for Voice2Sense prototype evaluation.
+
+6. Gesture Classifier Model & Weights (`viewer/public/tfjs_model/*`)
+   - Origin: Trained on kinematic landmark representations derived from the INCLUDE dataset (AI4Bharat / IIT Madras).
+   - Reference: Advaith Sridhar, Rohith Gandhi Ganesan, Pratyush Kumar, Mitesh M. Khapra. "INCLUDE: A Large Scale Dataset for Indian Sign Language Recognition", ACM Multimedia 2020 (DOI: 10.1145/3394171.3413528).
+   - License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+   - Terms: Permits adaptation and redistribution of derived model weights with attribution.

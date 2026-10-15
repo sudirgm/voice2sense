@@ -1,0 +1,457 @@
+﻿{
+    "sentences":  [
+                      {
+                          "sentence":  "Hello",
+                          "gloss":  "HELLO",
+                          "id":  "v2s_01"
+                      },
+                      {
+                          "sentence":  "Hello, how are you?",
+                          "gloss":  "HELLO HOW YOU?",
+                          "id":  "v2s_02"
+                      },
+                      {
+                          "sentence":  "I am doing good",
+                          "gloss":  "ME GOOD",
+                          "id":  "v2s_03"
+                      },
+                      {
+                          "sentence":  "Thank you very much",
+                          "gloss":  "THANK YOU",
+                          "id":  "v2s_04"
+                      },
+                      {
+                          "sentence":  "You are my friend",
+                          "gloss":  "YOU FRIEND ME",
+                          "id":  "v2s_05"
+                      },
+                      {
+                          "sentence":  "Nice to meet you",
+                          "gloss":  "MEET NICE",
+                          "id":  "v2s_06"
+                      },
+                      {
+                          "sentence":  "Please help me",
+                          "gloss":  "PLEASE HELP ME",
+                          "id":  "v2s_07"
+                      },
+                      {
+                          "sentence":  "I am sorry",
+                          "gloss":  "SORRY ME",
+                          "id":  "v2s_08"
+                      },
+                      {
+                          "sentence":  "Take care of yourself",
+                          "gloss":  "TAKE CARE YOU",
+                          "id":  "v2s_09"
+                      },
+                      {
+                          "sentence":  "Yes, exactly",
+                          "gloss":  "YES",
+                          "id":  "v2s_10"
+                      },
+                      {
+                          "sentence":  "No, not that",
+                          "gloss":  "NO",
+                          "id":  "v2s_11"
+                      },
+                      {
+                          "sentence":  "That is true",
+                          "gloss":  "TRUE",
+                          "id":  "v2s_12"
+                      },
+                      {
+                          "sentence":  "That is false",
+                          "gloss":  "FALSE",
+                          "id":  "v2s_13"
+                      },
+                      {
+                          "sentence":  "I need water",
+                          "gloss":  "WATER NEED",
+                          "id":  "v2s_14"
+                      },
+                      {
+                          "sentence":  "What is a cell?",
+                          "gloss":  "CELL WHAT?",
+                          "id":  "v2s_15"
+                      },
+                      {
+                          "sentence":  "Plant biology",
+                          "gloss":  "PLANT SCIENCE",
+                          "id":  "v2s_16"
+                      },
+                      {
+                          "sentence":  "Animal biology",
+                          "gloss":  "ANIMAL SCIENCE",
+                          "id":  "v2s_17"
+                      },
+                      {
+                          "sentence":  "Chloroplast in plant cell",
+                          "gloss":  "CHLOROPLAST PLANT CELL",
+                          "id":  "v2s_18"
+                      },
+                      {
+                          "sentence":  "Sunlight and energy",
+                          "gloss":  "SUN ENERGY",
+                          "id":  "v2s_19"
+                      },
+                      {
+                          "sentence":  "Force and motion",
+                          "gloss":  "FORCE MOTION",
+                          "id":  "v2s_20"
+                      },
+                      {
+                          "sentence":  "Mathematics subject",
+                          "gloss":  "MATH",
+                          "id":  "v2s_21"
+                      },
+                      {
+                          "sentence":  "Science subject",
+                          "gloss":  "SCIENCE",
+                          "id":  "v2s_22"
+                      },
+                      {
+                          "sentence":  "What is its function?",
+                          "gloss":  "FUNCTION WHAT?",
+                          "id":  "v2s_23"
+                      },
+                      {
+                          "sentence":  "How does it work?",
+                          "gloss":  "HOW WORK?",
+                          "id":  "v2s_24"
+                      },
+                      {
+                          "sentence":  "Why is that so?",
+                          "gloss":  "WHY?",
+                          "id":  "v2s_25"
+                      },
+                      {
+                          "sentence":  "Computer system",
+                          "gloss":  "COMPUTER",
+                          "id":  "v2s_26"
+                      },
+                      {
+                          "sentence":  "Computer keyboard",
+                          "gloss":  "KEYBOARD",
+                          "id":  "v2s_27"
+                      },
+                      {
+                          "sentence":  "Monitor screen",
+                          "gloss":  "MONITOR",
+                          "id":  "v2s_28"
+                      },
+                      {
+                          "sentence":  "Input device",
+                          "gloss":  "INPUT",
+                          "id":  "v2s_29"
+                      },
+                      {
+                          "sentence":  "Output device",
+                          "gloss":  "OUTPUT",
+                          "id":  "v2s_30"
+                      },
+                      {
+                          "sentence":  "Printer device",
+                          "gloss":  "PRINTER",
+                          "id":  "v2s_31"
+                      },
+                      {
+                          "sentence":  "Audio speaker",
+                          "gloss":  "SPEAKER",
+                          "id":  "v2s_32"
+                      },
+                      {
+                          "sentence":  "Option A",
+                          "gloss":  "OPTION A",
+                          "id":  "v2s_33"
+                      },
+                      {
+                          "sentence":  "Option B",
+                          "gloss":  "OPTION B",
+                          "id":  "v2s_34"
+                      },
+                      {
+                          "sentence":  "Option C",
+                          "gloss":  "OPTION C",
+                          "id":  "v2s_35"
+                      },
+                      {
+                          "sentence":  "Option D",
+                          "gloss":  "OPTION D",
+                          "id":  "v2s_36"
+                      },
+                      {
+                          "sentence":  "What is your name?",
+                          "gloss":  "WHAT NAME YOU?",
+                          "id":  "v2s_37"
+                      },
+                      {
+                          "sentence":  "Where are you going?",
+                          "gloss":  "WHERE YOU GO?",
+                          "id":  "v2s_38"
+                      },
+                      {
+                          "sentence":  "Good morning",
+                          "gloss":  "GOOD MORNING",
+                          "id":  "v2s_39"
+                      },
+                      {
+                          "sentence":  "Good evening",
+                          "gloss":  "GOOD EVENING",
+                          "id":  "v2s_40"
+                      }
+                  ],
+    "wordIndex":  {
+                      "that":  [
+                                   "v2s_11",
+                                   "v2s_12",
+                                   "v2s_13",
+                                   "v2s_25"
+                               ],
+                      "mathematics":  [
+                                          "v2s_21"
+                                      ],
+                      "computer":  [
+                                       "v2s_26",
+                                       "v2s_27"
+                                   ],
+                      "plant":  [
+                                    "v2s_16",
+                                    "v2s_18"
+                                ],
+                      "speaker":  [
+                                      "v2s_32"
+                                  ],
+                      "my":  [
+                                 "v2s_05"
+                             ],
+                      "work":  [
+                                   "v2s_24"
+                               ],
+                      "where":  [
+                                    "v2s_38"
+                                ],
+                      "very":  [
+                                   "v2s_04"
+                               ],
+                      "evening":  [
+                                      "v2s_40"
+                                  ],
+                      "care":  [
+                                   "v2s_09"
+                               ],
+                      "function":  [
+                                       "v2s_23"
+                                   ],
+                      "am":  [
+                                 "v2s_03",
+                                 "v2s_08"
+                             ],
+                      "energy":  [
+                                     "v2s_19"
+                                 ],
+                      "please":  [
+                                     "v2s_07"
+                                 ],
+                      "you":  [
+                                  "v2s_02",
+                                  "v2s_04",
+                                  "v2s_05",
+                                  "v2s_06",
+                                  "v2s_38"
+                              ],
+                      "true":  [
+                                   "v2s_12"
+                               ],
+                      "how":  [
+                                  "v2s_02",
+                                  "v2s_24"
+                              ],
+                      "does":  [
+                                   "v2s_24"
+                               ],
+                      "its":  [
+                                  "v2s_23"
+                              ],
+                      "to":  [
+                                 "v2s_06"
+                             ],
+                      "yourself":  [
+                                       "v2s_09"
+                                   ],
+                      "exactly":  [
+                                      "v2s_10"
+                                  ],
+                      "thank":  [
+                                    "v2s_04"
+                                ],
+                      "biology":  [
+                                      "v2s_16",
+                                      "v2s_17"
+                                  ],
+                      "subject":  [
+                                      "v2s_21",
+                                      "v2s_22"
+                                  ],
+                      "audio":  [
+                                    "v2s_32"
+                                ],
+                      "why":  [
+                                  "v2s_25"
+                              ],
+                      "in":  [
+                                 "v2s_18"
+                             ],
+                      "output":  [
+                                     "v2s_30"
+                                 ],
+                      "me":  [
+                                 "v2s_07"
+                             ],
+                      "are":  [
+                                  "v2s_02",
+                                  "v2s_05",
+                                  "v2s_38"
+                              ],
+                      "what":  [
+                                   "v2s_15",
+                                   "v2s_23",
+                                   "v2s_37"
+                               ],
+                      "science":  [
+                                      "v2s_22"
+                                  ],
+                      "so":  [
+                                 "v2s_25"
+                             ],
+                      "is":  [
+                                 "v2s_12",
+                                 "v2s_13",
+                                 "v2s_15",
+                                 "v2s_23",
+                                 "v2s_25",
+                                 "v2s_37"
+                             ],
+                      "keyboard":  [
+                                       "v2s_27"
+                                   ],
+                      "doing":  [
+                                    "v2s_03"
+                                ],
+                      "not":  [
+                                  "v2s_11"
+                              ],
+                      "false":  [
+                                    "v2s_13"
+                                ],
+                      "friend":  [
+                                     "v2s_05"
+                                 ],
+                      "help":  [
+                                   "v2s_07"
+                               ],
+                      "sorry":  [
+                                    "v2s_08"
+                                ],
+                      "screen":  [
+                                     "v2s_28"
+                                 ],
+                      "need":  [
+                                   "v2s_14"
+                               ],
+                      "no":  [
+                                 "v2s_11"
+                             ],
+                      "nice":  [
+                                   "v2s_06"
+                               ],
+                      "system":  [
+                                     "v2s_26"
+                                 ],
+                      "option":  [
+                                     "v2s_33",
+                                     "v2s_34",
+                                     "v2s_35",
+                                     "v2s_36"
+                                 ],
+                      "water":  [
+                                    "v2s_14"
+                                ],
+                      "monitor":  [
+                                      "v2s_28"
+                                  ],
+                      "cell":  [
+                                   "v2s_15",
+                                   "v2s_18"
+                               ],
+                      "meet":  [
+                                   "v2s_06"
+                               ],
+                      "of":  [
+                                 "v2s_09"
+                             ],
+                      "morning":  [
+                                      "v2s_39"
+                                  ],
+                      "it":  [
+                                 "v2s_24"
+                             ],
+                      "chloroplast":  [
+                                          "v2s_18"
+                                      ],
+                      "hello":  [
+                                    "v2s_01",
+                                    "v2s_02"
+                                ],
+                      "good":  [
+                                   "v2s_03",
+                                   "v2s_39",
+                                   "v2s_40"
+                               ],
+                      "device":  [
+                                     "v2s_29",
+                                     "v2s_30",
+                                     "v2s_31"
+                                 ],
+                      "and":  [
+                                  "v2s_19",
+                                  "v2s_20"
+                              ],
+                      "yes":  [
+                                  "v2s_10"
+                              ],
+                      "input":  [
+                                    "v2s_29"
+                                ],
+                      "sunlight":  [
+                                       "v2s_19"
+                                   ],
+                      "take":  [
+                                   "v2s_09"
+                               ],
+                      "much":  [
+                                   "v2s_04"
+                               ],
+                      "motion":  [
+                                     "v2s_20"
+                                 ],
+                      "printer":  [
+                                      "v2s_31"
+                                  ],
+                      "your":  [
+                                   "v2s_37"
+                               ],
+                      "force":  [
+                                    "v2s_20"
+                                ],
+                      "name":  [
+                                   "v2s_37"
+                               ],
+                      "going":  [
+                                    "v2s_38"
+                                ],
+                      "animal":  [
+                                     "v2s_17"
+                                 ]
+                  }
+}

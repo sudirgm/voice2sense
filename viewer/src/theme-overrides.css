@@ -1,0 +1,1273 @@
+:root {
+  --bg-deep: #0B0D12;
+  --bg-surface: #151921;
+  --bg-elevated: #1E232E;
+  --vibrant-coral: #1d4ed8;
+  --muted-gold: #D4A373;
+  --success-teal: #2A9D8F;
+  --text-primary: #F4F1EA;
+  --text-secondary: #9C968D;
+  --border-dark: #2E3340;
+  --border-subtle: #252A35;
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  /* Legacy renderer compatibility aliases */
+  --bg-main: var(--bg-deep);
+  --bg-card: var(--bg-surface);
+  --bg-button: var(--bg-elevated);
+  --bg-sub-bar: var(--bg-surface);
+  --primary-teal: var(--vibrant-coral);
+  --primary-teal-hover: #2563eb;
+  --primary-teal-deep: var(--bg-deep);
+  --text-on-teal: #FFFFFF;
+  --text-on-teal-muted: var(--text-secondary);
+  --border-color: var(--border-dark);
+  --border-input: var(--border-dark);
+  --color-primary-dark: var(--bg-deep);
+  --color-primary-light: var(--bg-surface);
+  --color-accent: var(--vibrant-coral);
+  --color-accent-hover: #2563eb;
+  --color-accent-active: var(--vibrant-coral);
+  --color-success: var(--success-teal);
+  --color-warning: var(--muted-gold);
+  --color-error: var(--vibrant-coral);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border-dark);
+  --color-bg-neutral: var(--bg-deep);
+  --bg-primary: var(--bg-deep);
+  --bg-secondary: var(--bg-surface);
+  --bg-card-hover: var(--bg-elevated);
+  --bg-card-active: var(--bg-elevated);
+  --accent-blue: var(--vibrant-coral);
+  --accent-indigo: var(--vibrant-coral);
+  --accent-purple: var(--muted-gold);
+  --accent-cyan: var(--success-teal);
+  --accent-glow: transparent;
+  --accent-green: var(--success-teal);
+  --accent-red: var(--vibrant-coral);
+  --border-focus: var(--vibrant-coral);
+  --glass-blur: none;
+  --glass-bg: var(--bg-surface);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+}
+
+/* ============================================================
+   BASE RESETS & GLOBAL CONTAINERS
+   ============================================================ */
+*, *::before, *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html, body {
+  background-color: var(--bg-deep) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-body) !important;
+}
+
+#app-container,
+#main-workspace,
+.app-view-container,
+.view-panel,
+.stage-container,
+.edu-stage,
+.landing-page-body,
+.pl-container,
+.workspace-container {
+  background-color: var(--bg-deep) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Strip text gradients */
+.brand-accent,
+.gradient-text,
+.lp-gradient-word {
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ============================================================
+   1. NAVIGATION BAR
+   ============================================================ */
+#top-navbar,
+.app-header-pro,
+.landing-nav-bar,
+header.app-header-pro {
+  background-color: var(--bg-surface) !important;
+  background: var(--bg-surface) !important;
+  border-bottom: 1px solid var(--border-dark) !important;
+  height: 72px;
+  backdrop-filter: none !important;
+}
+
+/* Text color for links */
+#top-navbar a,
+#top-navbar button,
+.app-header-pro .primary-nav-btn,
+.app-header-pro .nav-tab-btn,
+.landing-nav-bar .landing-nav-link,
+.portal-primary-nav .primary-nav-btn,
+.portal-primary-nav .nav-tab-btn,
+.portal-primary-nav-items button {
+  color: var(--text-secondary) !important;
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  text-decoration: none;
+  font-weight: 500 !important;
+}
+
+.portal-primary-nav-items button span,
+.landing-nav-links a span {
+  color: var(--text-secondary) !important;
+}
+
+/* Hover link text */
+#top-navbar .primary-nav-btn:hover,
+#top-navbar .nav-tab-btn:hover,
+.app-header-pro .primary-nav-btn:hover,
+.app-header-pro .nav-tab-btn:hover,
+.landing-nav-bar .landing-nav-link:hover,
+.portal-primary-nav-items button:hover {
+  color: var(--text-primary) !important;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+#top-navbar .primary-nav-btn:hover span,
+.app-header-pro .primary-nav-btn:hover span,
+.landing-nav-bar .landing-nav-link:hover span,
+.portal-primary-nav-items button:hover span {
+  color: var(--text-primary) !important;
+}
+
+/* Active link background: var(--bg-elevated) & text: var(--vibrant-coral) */
+#top-navbar .primary-nav-btn.active,
+#top-navbar .primary-nav-btn.btn-active,
+#top-navbar .primary-nav-btn[aria-current='page'],
+.app-header-pro .primary-nav-btn.active,
+.app-header-pro .primary-nav-btn.btn-active,
+.app-header-pro .primary-nav-btn[aria-current='page'],
+.app-header-pro .nav-tab-btn.active,
+.app-header-pro .nav-tab-btn[aria-current='page'],
+.landing-nav-bar .landing-nav-link.active,
+.portal-primary-nav-items button.active,
+.portal-primary-nav-items button[aria-current='page'] {
+  background-color: var(--bg-elevated) !important;
+  background: var(--bg-elevated) !important;
+  color: var(--vibrant-coral) !important;
+  border-radius: 8px !important;
+  border: none !important;
+  font-weight: 700 !important;
+}
+
+.app-header-pro .primary-nav-btn.active span,
+.app-header-pro .primary-nav-btn[aria-current='page'] span,
+.portal-primary-nav-items button.active span,
+.portal-primary-nav-items button[aria-current='page'] span {
+  color: var(--vibrant-coral) !important;
+}
+
+/* Logo text color: var(--vibrant-coral) */
+.brand-title,
+.brand-text,
+.brand-serif-two,
+.brand-title span,
+.brand-icon,
+.brand-group svg {
+  color: var(--vibrant-coral) !important;
+  fill: none;
+}
+
+.brand-icon {
+  background-color: var(--bg-surface) !important;
+}
+
+/* ============================================================
+   2. BUTTONS
+   ============================================================ */
+/* Primary Button:
+   - Background: var(--vibrant-coral)
+   - Text color: #FFFFFF (Pure white ONLY for text inside coral buttons)
+   - Border: none
+   - Padding: 12px 24px
+   - Border-radius: 8px
+   - Hover background: #1d4ed8 */
+.btn-primary,
+.primary-btn,
+.primary-action-btn:not(.primary-nav-btn),
+.lp-btn-primary,
+.btn-landing-cta,
+.btn-enter-portal,
+.fib-btn-primary,
+.hle-btn-continue,
+.goal-action-btn,
+.manual-send-btn,
+.edu-send-btn,
+.edu-sl-primary-btn,
+.btn-card-play,
+.action-btn.primary,
+.btn-learn-isl,
+.rtc-action-btn.primary,
+#btn-rtc-toggle-capture,
+#btn-rtc-quick-speak,
+#btn-rtc-hearing-manual-sign {
+  background-color: var(--vibrant-coral) !important;
+  background: var(--vibrant-coral) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  background-image: none !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary *,
+.primary-btn *,
+.primary-action-btn:not(.primary-nav-btn) *,
+.lp-btn-primary *,
+.btn-landing-cta *,
+.btn-enter-portal *,
+.fib-btn-primary *,
+.hle-btn-continue *,
+.goal-action-btn *,
+.manual-send-btn *,
+.edu-send-btn *,
+.edu-sl-primary-btn *,
+.btn-card-play *,
+.action-btn.primary *,
+.btn-learn-isl *,
+.rtc-action-btn.primary *,
+#btn-rtc-toggle-capture *,
+#btn-rtc-quick-speak *,
+#btn-rtc-hearing-manual-sign * {
+  color: #FFFFFF !important;
+}
+
+.btn-primary:hover,
+.primary-btn:hover,
+.primary-action-btn:not(.primary-nav-btn):hover,
+.lp-btn-primary:hover,
+.btn-landing-cta:hover,
+.btn-enter-portal:hover,
+.fib-btn-primary:hover,
+.hle-btn-continue:hover,
+.goal-action-btn:hover,
+.manual-send-btn:hover,
+.edu-send-btn:hover,
+.edu-sl-primary-btn:hover,
+.btn-card-play:hover,
+.action-btn.primary:hover,
+.btn-learn-isl:hover,
+.rtc-action-btn.primary:hover,
+#btn-rtc-toggle-capture:hover,
+#btn-rtc-quick-speak:hover,
+#btn-rtc-hearing-manual-sign:hover {
+  background-color: #2563eb !important;
+  background: #2563eb !important;
+  color: #FFFFFF !important;
+}
+
+/* Secondary Button:
+   - Background: transparent
+   - Text color: var(--text-primary)
+   - Border: 1px solid var(--border-dark)
+   - Padding: 12px 24px
+   - Border-radius: 8px
+   - Hover background: var(--bg-elevated)
+   - Hover border: 1px solid var(--vibrant-coral) */
+.btn-secondary,
+.secondary-btn,
+.lp-btn-ghost,
+.lp-btn-outline,
+.fib-btn-secondary,
+.action-btn.secondary,
+.action-btn.ghost,
+.btn-card-learn,
+.btn-card-practice,
+.btn-card-review,
+.pl-btn-secondary,
+.edu-curr-action-btn.secondary,
+.inspector-action-btn.secondary,
+.rtc-action-btn.secondary,
+#btn-rtc-quick-capture,
+#btn-rtc-pause-resume {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-dark) !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  background-image: none !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-secondary *,
+.secondary-btn *,
+.lp-btn-ghost *,
+.lp-btn-outline *,
+.fib-btn-secondary *,
+.action-btn.secondary *,
+.action-btn.ghost *,
+.btn-card-learn *,
+.btn-card-practice *,
+.btn-card-review *,
+.pl-btn-secondary *,
+.edu-curr-action-btn.secondary *,
+.inspector-action-btn.secondary *,
+.rtc-action-btn.secondary *,
+#btn-rtc-quick-capture *,
+#btn-rtc-pause-resume * {
+  color: var(--text-primary) !important;
+}
+
+.btn-secondary:hover,
+.secondary-btn:hover,
+.lp-btn-ghost:hover,
+.lp-btn-outline:hover,
+.fib-btn-secondary:hover,
+.action-btn.secondary:hover,
+.action-btn.ghost:hover,
+.btn-card-learn:hover,
+.btn-card-practice:hover,
+.btn-card-review:hover,
+.pl-btn-secondary:hover,
+.edu-curr-action-btn.secondary:hover,
+.inspector-action-btn.secondary:hover,
+.rtc-action-btn.secondary:hover,
+#btn-rtc-quick-capture:hover,
+#btn-rtc-pause-resume:hover {
+  background-color: var(--bg-elevated) !important;
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--vibrant-coral) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Subheader contextual buttons */
+.rtc-control-bar button:not(.btn-primary):not(.primary-btn):not(.active),
+.portal-context-bar button:not(.active),
+.app-subheader button:not(.active) {
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-dark) !important;
+  border-radius: 8px !important;
+}
+
+/* ============================================================
+   3. CARDS AND CONTAINERS
+   - Background: var(--bg-surface)
+   - Border: 1px solid var(--border-dark)
+   - Border-radius: 12px
+   - Padding: 24px
+   - Hover border: 1px solid var(--vibrant-coral)
+   - Card Title text: var(--text-primary)
+   - Card Body text: var(--text-secondary)
+   ============================================================ */
+.card,
+.panel,
+.glass-panel,
+.view-panel,
+.widget-panel,
+.landing-card,
+.stats-card,
+.quick-action-card,
+.learning-card,
+.module-card,
+.module-detail-panel,
+.settings-panel,
+.settings-card,
+.isl-card,
+.repo-card,
+.sign-card,
+.entry-card,
+.profile-card,
+.home-profile-card,
+.home-goal-card,
+.home-learner-experience-card,
+.hle-stat-card,
+.metric-card,
+.metric-box,
+.edu-sl-card,
+.edu-subject-card,
+.edu-chapter-header,
+.edu-sign-item,
+.edu-sign-card-rich,
+.skill-section-card,
+.skill-sign-card,
+.rtc-stage-card,
+.rtc-info-card,
+.category-card,
+.domain-card,
+.pl-onboarding-card,
+.assistant-concept-card,
+.drawer-panel,
+.portal-help-modal-card,
+.portal-settings-card,
+.portal-avatar-card,
+.user-dropdown-menu,
+.rtc-guide-box {
+  background-color: var(--bg-surface) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-dark) !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Card Hover border: 1px solid var(--vibrant-coral) */
+.card:hover,
+.panel:hover,
+.landing-card:hover,
+.stats-card:hover,
+.quick-action-card:hover,
+.learning-card:hover,
+.module-card:hover,
+.settings-card:hover,
+.isl-card:hover,
+.repo-card:hover,
+.sign-card:hover,
+.entry-card:hover,
+.home-goal-card:hover,
+.hle-stat-card:hover,
+.edu-subject-card:hover,
+.edu-sign-item:hover,
+.edu-sign-card-rich:hover,
+.skill-section-card:hover,
+.skill-sign-card:hover,
+.category-card:hover,
+.domain-card:hover {
+  border: 1px solid var(--vibrant-coral) !important;
+}
+
+/* Card Title text: var(--text-primary) */
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
+.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6,
+.card-title,
+.goal-title,
+.hle-title,
+.rec-title,
+.module-title,
+.subject-title,
+.sign-text,
+.entry-card-title,
+.panel-title,
+.edu-sign-card-title,
+.skill-sign-title,
+.hle-rec-title,
+.home-goals-heading {
+  color: var(--text-primary) !important;
+  font-family: var(--font-heading) !important;
+}
+
+/* Card Body text: var(--text-secondary) */
+.card p,
+.panel p,
+.card-body,
+.goal-desc,
+.hle-desc,
+.module-desc,
+.entry-card-desc,
+.edu-sign-card-sentence,
+.edu-sign-card-gloss,
+.hle-rec-rationale,
+.card label {
+  color: var(--text-secondary) !important;
+}
+
+/* ============================================================
+   4. INPUT FIELDS
+   - Background: var(--bg-elevated)
+   - Border: 1px solid var(--border-dark)
+   - Border-radius: 8px
+   - Padding: 12px 16px
+   - Text color: var(--text-primary)
+   - Placeholder color: var(--text-secondary)
+   - Focus border: 1px solid var(--vibrant-coral)
+   - Label text: var(--text-secondary)
+   ============================================================ */
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea,
+select,
+.chat-input-box,
+.pro-input-control,
+.repo-search-input,
+.pl-modal-input,
+.pl-modal-select,
+.search-input,
+.edu-sl-search-bar input,
+.assistant-input-box,
+.sentence-input,
+.rtc-twoway-chat-input,
+#rtc-twoway-fallback-input,
+#rtc-hearing-manual-input {
+  background-color: var(--bg-elevated) !important;
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-dark) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  color: var(--text-primary) !important;
+  background-image: none !important;
+  font-family: var(--font-body) !important;
+}
+
+/* Placeholder color: var(--text-secondary) */
+input::placeholder,
+textarea::placeholder,
+.pro-input-control::placeholder,
+.repo-search-input::placeholder,
+.chat-input-box::placeholder,
+#rtc-twoway-fallback-input::placeholder,
+#rtc-hearing-manual-input::placeholder {
+  color: var(--text-secondary) !important;
+  opacity: 1 !important;
+}
+
+/* Focus border: 1px solid var(--vibrant-coral) */
+input:focus,
+textarea:focus,
+select:focus,
+.chat-input-box:focus,
+.pro-input-control:focus,
+.repo-search-input:focus,
+.pl-modal-input:focus,
+.pl-modal-select:focus,
+#rtc-twoway-fallback-input:focus,
+#rtc-hearing-manual-input:focus {
+  border: 1px solid var(--vibrant-coral) !important;
+  outline: none !important;
+}
+
+/* Label text: var(--text-secondary) */
+label,
+.form-label,
+.input-label,
+.settings-label,
+.pl-form-group label,
+.hle-stat-label,
+.edu-panel-label,
+.repo-filter-label {
+  color: var(--text-secondary) !important;
+}
+
+/* ============================================================
+   5. TEXT ELEMENTS
+   - Body paragraphs: var(--text-primary)
+   - Secondary descriptions: var(--text-secondary)
+   - Links: var(--vibrant-coral)
+   - Links hover: #1d4ed8
+   ============================================================ */
+/* Body paragraphs */
+p,
+.body-text,
+article p {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+/* Secondary descriptions */
+.text-secondary,
+.text-muted,
+.subhead,
+.subtitle,
+.description,
+.secondary-desc,
+.fib-desc,
+.home-goals-subheading,
+.settings-desc,
+.repo-subtitle,
+.repo-hero-action-hint,
+.hle-stat-sub,
+.brand-subtitle,
+.metric-sub {
+  color: var(--text-secondary) !important;
+}
+
+/* Links */
+a:not(.landing-nav-link):not(.primary-nav-btn):not(.btn-primary):not(.btn-secondary):not(.lp-btn-primary):not(.lp-btn-ghost),
+.link,
+.link-text,
+.cta-link,
+.lesson-cta-link {
+  color: var(--vibrant-coral) !important;
+  text-decoration: none;
+}
+
+/* Links hover */
+a:not(.landing-nav-link):not(.primary-nav-btn):not(.btn-primary):not(.btn-secondary):not(.lp-btn-primary):not(.lp-btn-ghost):hover,
+.link:hover,
+.cta-link:hover,
+.lesson-cta-link:hover {
+  color: #2563eb !important;
+}
+
+/* ============================================================
+   6. BADGES AND TAGS
+   - Background: var(--bg-elevated)
+   - Text: var(--muted-gold)
+   - Border: 1px solid var(--border-dark)
+   - Border-radius: 16px
+   - Padding: 4px 12px
+   ============================================================ */
+.badge,
+.tag,
+.status-badge,
+.rtc-status-badge,
+.goal-badge,
+.goal-category-tag,
+.entry-card-tag,
+.edu-breadcrumb-tag,
+.plan-type-tag,
+.chip,
+.telemetry-chip,
+.rec-chip,
+.category-tag,
+.meta-tag,
+.badge-pill,
+.section-count-badge,
+.hle-subtag,
+.rec-status-chip,
+.alphabet-chip,
+.number-chip {
+  background-color: var(--bg-elevated) !important;
+  background: var(--bg-elevated) !important;
+  color: var(--muted-gold) !important;
+  border: 1px solid var(--border-dark) !important;
+  border-radius: 16px !important;
+  padding: 4px 12px !important;
+  font-weight: 500 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ============================================================
+   7. PROGRESS BARS
+   - Track background: var(--bg-elevated)
+   - Fill color: var(--vibrant-coral)
+   - Height: 8px
+   - Border-radius: 4px
+   ============================================================ */
+progress,
+.progress-bar,
+.progress-track,
+.hle-progress-bar-bg,
+.progression-track,
+.curriculum-progress-track,
+.lp-scroll-progress {
+  background-color: var(--bg-elevated) !important;
+  background: var(--bg-elevated) !important;
+  height: 8px !important;
+  border-radius: 4px !important;
+  border: none !important;
+  overflow: hidden;
+}
+
+.progress-bar-fill,
+.hle-progress-bar-fill,
+.progress-fill,
+.progression-bar-fill,
+progress::-webkit-progress-value,
+progress::-moz-progress-bar {
+  background-color: var(--vibrant-coral) !important;
+  background: var(--vibrant-coral) !important;
+  height: 8px !important;
+  border-radius: 4px !important;
+}
+
+/* ============================================================
+   8. 3D AVATAR CONTAINER
+   - Background: var(--bg-deep)
+   - Border: 1px solid var(--border-dark)
+   - Border-radius: 16px
+   ============================================================ */
+#canvas-container,
+.corner-avatar-widget,
+.avatar-canvas-box,
+.studio-canvas-container,
+.rtc-twoway-avatar-stage,
+.assistant-avatar-panel,
+.assistant-canvas-mount,
+.edu-signlearn-canvas,
+.edu-curriculum-canvas-wrapper,
+.lp-avatar-stage,
+#signlearn-canvas-box,
+#academic-canvas-box,
+#rtc-twoway-avatar-mount {
+  background-color: var(--bg-deep) !important;
+  background: var(--bg-deep) !important;
+  border: 1px solid var(--border-dark) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+/* ============================================================
+   9. TABS
+   - Active tab background: transparent
+   - Active tab text: var(--vibrant-coral)
+   - Active tab bottom border: 2px solid var(--vibrant-coral)
+   - Inactive tab text: var(--text-secondary)
+   - Inactive tab hover text: var(--text-primary)
+   ============================================================ */
+/* Inactive tab text: var(--text-secondary) */
+.tab-btn,
+.tab,
+.nav-tab,
+.submode-btn,
+.rtc-submode-btn,
+.skill-level-btn,
+.level-btn,
+.mode-btn,
+.repo-filter-chip,
+.repo-filter-pill {
+  color: var(--text-secondary) !important;
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.tab-btn *,
+.tab *,
+.nav-tab *,
+.submode-btn *,
+.rtc-submode-btn *,
+.skill-level-btn *,
+.level-btn *,
+.mode-btn * {
+  color: var(--text-secondary);
+}
+
+/* Inactive tab hover text: var(--text-primary) */
+.tab-btn:hover,
+.tab:hover,
+.nav-tab:hover,
+.submode-btn:hover,
+.rtc-submode-btn:hover,
+.skill-level-btn:hover,
+.level-btn:hover,
+.mode-btn:hover,
+.repo-filter-chip:hover,
+.repo-filter-pill:hover {
+  color: var(--text-primary) !important;
+  background-color: transparent !important;
+}
+
+.tab-btn:hover *,
+.tab:hover *,
+.nav-tab:hover *,
+.submode-btn:hover *,
+.rtc-submode-btn:hover *,
+.skill-level-btn:hover *,
+.level-btn:hover *,
+.mode-btn:hover * {
+  color: var(--text-primary) !important;
+}
+
+/* Active tab:
+   - Active tab background: transparent
+   - Active tab text: var(--vibrant-coral)
+   - Active tab bottom border: 2px solid var(--vibrant-coral) */
+.tab-btn.active,
+.tab.active,
+.nav-tab.active,
+.submode-btn.active,
+.rtc-submode-btn.active,
+.skill-level-btn.active,
+.level-btn.active,
+.mode-btn.active,
+.repo-filter-chip.active,
+.repo-filter-pill.active {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: var(--vibrant-coral) !important;
+  border: none !important;
+  border-bottom: 2px solid var(--vibrant-coral) !important;
+  border-radius: 0 !important;
+  font-weight: 700 !important;
+}
+
+.tab-btn.active *,
+.tab.active *,
+.nav-tab.active *,
+.submode-btn.active *,
+.rtc-submode-btn.active *,
+.skill-level-btn.active *,
+.level-btn.active *,
+.mode-btn.active * {
+  color: var(--vibrant-coral) !important;
+}
+
+/* ============================================================
+   10. STATUS INDICATORS
+   - Ready/Success: var(--success-teal)
+   - Listening/Processing: var(--muted-gold)
+   - Error/Inactive: var(--vibrant-coral)
+   ============================================================ */
+/* Ready / Success: var(--success-teal) */
+.status-indicator.ready,
+.status-indicator.success,
+.status-indicator.status-learned,
+.status-indicator.status-mastered,
+.status-ready,
+.status-success,
+.rtc-status-dot.ready,
+.rtc-status-dot.success,
+.dot-success,
+.sign-card .status-indicator.status-learned,
+.sign-card .status-indicator.status-mastered {
+  background-color: var(--success-teal) !important;
+  color: var(--success-teal) !important;
+}
+
+/* Listening / Processing: var(--muted-gold) */
+.status-indicator.listening,
+.status-indicator.processing,
+.status-indicator.status-in_progress,
+.status-listening,
+.status-processing,
+.rtc-status-dot.listening,
+.rtc-status-dot.processing,
+.dot-warning,
+.sign-card .status-indicator.status-in_progress {
+  background-color: var(--muted-gold) !important;
+  color: var(--muted-gold) !important;
+}
+
+/* Error / Inactive: var(--vibrant-coral) */
+.status-indicator.error,
+.status-indicator.inactive,
+.status-indicator.status-needs_review,
+.status-error,
+.status-inactive,
+.rtc-status-dot.error,
+.rtc-status-dot.inactive,
+.dot-error,
+.sign-card .status-indicator.status-needs_review {
+  background-color: var(--vibrant-coral) !important;
+  color: var(--vibrant-coral) !important;
+}
+
+/* Status indicator container badges */
+.rtc-status-indicator,
+.rtc-input-badge,
+.rtc-audio-badge {
+  background-color: var(--bg-elevated) !important;
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-dark) !important;
+  color: var(--text-primary) !important;
+  border-radius: 8px !important;
+}
+.rtc-status-indicator *,
+.rtc-input-badge *,
+.rtc-audio-badge * {
+  color: var(--text-primary) !important;
+}
+
+/* ============================================================
+   STEP 3: PAGE SPECIFIC RULES
+   ============================================================ */
+
+/* --- HOME PAGE ---
+   - Hero section background: var(--bg-deep)
+   - Feature cards background: var(--bg-surface) */
+.lp-hero-section,
+.hero-section,
+#lp-hero,
+.lp-hero-bg,
+.lp-hero-gradient {
+  background-color: var(--bg-deep) !important;
+  background: var(--bg-deep) !important;
+}
+
+.lp-hero-section *,
+.hero-section *,
+#lp-hero *,
+.lp-hero-h1,
+.lp-hero-subhead,
+.lp-hero-desc,
+.lp-hero-text * {
+  color: var(--text-primary) !important;
+}
+
+/* Secondary CTA in hero */
+.lp-hero-section .btn-secondary,
+.lp-hero-section .lp-btn-ghost,
+.lp-hero-section .lp-btn-outline {
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-dark) !important;
+}
+.lp-hero-section .btn-secondary *,
+.lp-hero-section .lp-btn-ghost *,
+.lp-hero-section .lp-btn-outline * {
+  color: var(--text-primary) !important;
+}
+
+/* Feature cards background: var(--bg-surface) */
+.home-goal-card,
+.hle-stat-card,
+.home-learner-experience-card,
+.lp-card,
+.lp-feat-card,
+.lp-feature-card,
+.lp-step-card,
+.lp-impact-card,
+.lp-barrier-node {
+  background-color: var(--bg-surface) !important;
+  background: var(--bg-surface) !important;
+}
+
+/* --- COMMUNICATE TAB ---
+   - Control bar background: var(--bg-surface)
+   - Speed control pills background: var(--bg-elevated)
+   - Speed control pills text: var(--text-primary) */
+#rtc-control-panel,
+.rtc-control-bar,
+.feature-intro-bar,
+#rtc-feature-intro-bar,
+.portal-context-bar {
+  background-color: var(--bg-surface) !important;
+  background: var(--bg-surface) !important;
+  border-bottom: 1px solid var(--border-dark) !important;
+}
+
+#rtc-control-panel *,
+.rtc-control-bar *,
+.feature-intro-bar *,
+#rtc-feature-intro-bar * {
+  color: var(--text-primary);
+}
+
+/* Speed control pills:
+   - Background: var(--bg-elevated)
+   - Text: var(--text-primary) */
+.mini-chip,
+.btn-speed,
+.pill-speed,
+.rtc-speed-chips button,
+.rtc-speed-selector button {
+  background-color: var(--bg-elevated) !important;
+  background: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-dark) !important;
+  border-radius: 12px !important;
+}
+
+.mini-chip.active,
+.btn-speed.active,
+.pill-speed.active,
+.rtc-speed-chips button.active,
+.rtc-speed-selector button.active {
+  background-color: var(--vibrant-coral) !important;
+  background: var(--vibrant-coral) !important;
+  color: #FFFFFF !important;
+}
+
+/* --- LEARN ISL TAB ---
+   - Category cards border: 1px solid var(--border-dark)
+   - Sign cards background: var(--bg-surface)
+   - Beginner badge text: var(--success-teal)
+   - Intermediate badge text: var(--muted-gold)
+   - Advanced badge text: var(--vibrant-coral) */
+.category-card,
+.domain-card,
+.skill-section-card,
+.skill-category-card,
+.repo-category-card {
+  border: 1px solid var(--border-dark) !important;
+}
+
+.sign-card,
+.skill-sign-card,
+.edu-sign-card-rich,
+.edu-sign-item {
+  background-color: var(--bg-surface) !important;
+  background: var(--bg-surface) !important;
+}
+
+.sign-card:hover,
+.skill-sign-card:hover,
+.edu-sign-card-rich:hover,
+.edu-sign-item:hover {
+  border: 1px solid var(--vibrant-coral) !important;
+}
+
+/* Beginner badge text: var(--success-teal) */
+.badge-beginner,
+.tier-beginner,
+.chip-beginner,
+.beginner,
+.lp-tier-beginner,
+.sign-tier.tier-beginner,
+[data-level="beginner"],
+.skill-level-btn[data-level="beginner"].active,
+.telemetry-chip.beginner {
+  background-color: var(--bg-elevated) !important;
+  background: var(--bg-elevated) !important;
+  color: var(--success-teal) !important;
+  border: 1px solid var(--border-dark) !important;
+}
+
+/* Intermediate badge text: var(--muted-gold) */
+.badge-intermediate,
+.tier-intermediate,
+.chip-intermediate,
+.intermediate,
+.lp-tier-intermediate,
+.sign-tier.tier-intermediate,
+[data-level="intermediate"],
+.skill-level-btn[data-level="intermediate"].active,
+.telemetry-chip.intermediate {
+  background-color: var(--bg-elevated) !important;
+  background: var(--bg-elevated) !important;
+  color: var(--muted-gold) !important;
+  border: 1px solid var(--border-dark) !important;
+}
+
+/* Advanced badge text: var(--vibrant-coral) */
+.badge-advanced,
+.tier-advanced,
+.chip-advanced,
+.advanced,
+.lp-tier-advanced,
+.sign-tier.tier-advanced,
+[data-level="advanced"],
+.skill-level-btn[data-level="advanced"].active,
+.telemetry-chip.advanced {
+  background-color: var(--bg-elevated) !important;
+  background: var(--bg-elevated) !important;
+  color: var(--vibrant-coral) !important;
+  border: 1px solid var(--border-dark) !important;
+}
+
+/* --- LEARN & STUDY TAB ---
+   - Learning plan banner background: var(--bg-surface)
+   - Subject cards background: var(--bg-surface)
+   - Locked lesson cards opacity: 0.6 */
+.pl-school-banner,
+#pl-school-header,
+.learning-plan-banner,
+[class*="learning-plan"],
+[class*="today-plan"],
+[class*="learning-path"] {
+  background-color: var(--bg-surface) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-dark) !important;
+  border-radius: 12px !important;
+}
+
+.pl-school-banner *,
+#pl-school-header * {
+  color: var(--text-primary) !important;
+}
+
+/* Subject cards background: var(--bg-surface) */
+.edu-subject-card,
+.subject-card,
+[class*="subject-card"] {
+  background-color: var(--bg-surface) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-dark) !important;
+}
+
+/* Locked lesson cards opacity: 0.6 */
+.locked-lesson,
+.lesson-card.locked,
+[class*="lesson-card"].locked,
+.edu-lesson-card.locked,
+.lesson-card-locked {
+  opacity: 0.6 !important;
+  border: 1px solid var(--border-dark) !important;
+}
+
+/* ============================================================
+   COMMUNICATE TAB HERO & SCREEN MODE COMPONENT OVERRIDES
+   ============================================================ */
+.empty-placeholder,
+#screen-empty-placeholder {
+  background: transparent !important;
+}
+
+.placeholder-card,
+.rtc-hero-card {
+  background-color: var(--bg-surface) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-dark) !important;
+  border-radius: 16px !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.placeholder-card *,
+.rtc-hero-card * {
+  color: var(--text-primary);
+}
+
+.card-icon-pulse {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-dark) !important;
+  border-radius: 12px;
+}
+
+.card-icon-pulse svg {
+  stroke: var(--vibrant-coral) !important;
+}
+
+.rtc-badge-eyebrow {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-dark) !important;
+  color: var(--muted-gold) !important;
+}
+
+.rtc-hero-title {
+  color: var(--text-primary) !important;
+}
+
+.rtc-hero-desc {
+  color: var(--text-secondary) !important;
+}
+
+.rtc-capture-notice {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-dark) !important;
+}
+
+.rtc-notice-text {
+  color: var(--text-secondary) !important;
+}
+
+.rtc-notice-text strong {
+  color: var(--text-primary) !important;
+}
+
+.rtc-notice-text em {
+  color: var(--vibrant-coral) !important;
+}
+
+.btn-rtc-primary-cta,
+#btn-rtc-start-translation {
+  background-color: var(--vibrant-coral) !important;
+  background: var(--vibrant-coral) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn-rtc-primary-cta:hover,
+#btn-rtc-start-translation:hover {
+  background-color: #2563eb !important;
+  background: #2563eb !important;
+  color: #FFFFFF !important;
+}
+
+.btn-rtc-primary-cta *,
+#btn-rtc-start-translation * {
+  color: #FFFFFF !important;
+}
+
+.demo-actions-row {
+  background: transparent !important;
+}
+
+.chip-action-btn,
+#btn-quick-twoway,
+#btn-quick-mic,
+#btn-quick-yt {
+  background: var(--bg-elevated) !important;
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border-dark) !important;
+}
+
+#btn-quick-twoway,
+.chip-action-btn.twoway-action {
+  color: var(--success-teal) !important;
+}
+
+#btn-quick-mic,
+.chip-action-btn.accent {
+  color: var(--muted-gold) !important;
+}
+
+#btn-quick-yt,
+.chip-action-btn.yt-action {
+  color: var(--vibrant-coral) !important;
+}
+
+.chip-action-btn:hover,
+#btn-quick-twoway:hover,
+#btn-quick-mic:hover,
+#btn-quick-yt:hover {
+  border-color: var(--vibrant-coral) !important;
+}
+
+.rtc-submode-group {
+  background: var(--bg-elevated) !important;
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border-dark) !important;
+}
+
+.rtc-submode-btn {
+  color: var(--text-secondary) !important;
+  background: transparent !important;
+}
+
+.rtc-submode-btn.active,
+#btn-rtc-submode-screen.active {
+  background: var(--vibrant-coral) !important;
+  background-color: var(--vibrant-coral) !important;
+  color: #FFFFFF !important;
+}
+
+.rtc-submode-btn.active *,
+#btn-rtc-submode-screen.active * {
+  color: #FFFFFF !important;
+}
+
+#btn-rtc-submode-twoway.active {
+  background: var(--success-teal) !important;
+  background-color: var(--success-teal) !important;
+  color: #FFFFFF !important;
+}
+
+#btn-rtc-submode-twoway.active * {
+  color: #FFFFFF !important;
+}
+
